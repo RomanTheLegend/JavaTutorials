@@ -1,12 +1,8 @@
 package com.dev.Codility;
 
-import java.util.Arrays;
-
 public class MaxCounters {
-    public static void main(String[] args) {
-        int[] A = new int[]{3, 4, 4, 6, 1, 4, 4};
-        int N = 5;
-        System.out.println(solution(N, A));
+    public static void main(String[] args){
+
     }
 
     static int[] solution(int N,int[] A){
