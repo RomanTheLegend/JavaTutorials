@@ -1,13 +1,19 @@
 package com.dev.Codility;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertArrayEquals;
 
-class MaxCountersTest {
+public class MaxCountersTest {
 
     @Test
-    void solution() {
+    public void checkBasicSolution() {
+        int[] A = new int[]{3, 4, 4, 6, 1, 4, 4};
+        int N = 5;
+        int[] expected = new int[]{3,2,2,4,2};
 
+        int[] result = MaxCounters.solution(N, A);
+        assertArrayEquals(expected,result);
+        System.out.println("MaxCountersTest complete");
     }
 }
