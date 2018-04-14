@@ -3,24 +3,16 @@ package com.dev.Codility;
 import java.util.HashSet;
 
 public class SmallestMissedInteger {
-    public static void main(String[] args) {
-        // write your code here
-
-        int[] A = new int[]{1, 3, 6, 4, 1, 2};
-
-
-        System.out.println(solution(A));
-    }
 
     static int solution(int[] A){
         HashSet<Integer> existingNumbers = new HashSet<>();
         int smallestInt = 1;
 
         for (int i = 0; i < A.length ; i++ ){
-            Integer item = new Integer(A[i]);
-            if(item > 0){
-                existingNumbers.add(item);
-                if ( smallestInt == item ){
+            Integer record = new Integer(A[i]);
+            if(record > 0){
+                existingNumbers.add(record);
+                if ( smallestInt == record ){
                     smallestInt = getNextFreeInt(existingNumbers, smallestInt);
                 }
             }

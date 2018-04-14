@@ -7,7 +7,7 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 
 @Suite.SuiteClasses({
-        MaxCountersTest.class, BinaryGapTest.class
+        MaxCountersTest.class, BinaryGapTest.class, ArrayCyclicRotationTest.class
 })
 
 public class JunitTestSuite {

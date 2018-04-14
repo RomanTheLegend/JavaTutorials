@@ -2,24 +2,22 @@ package com.dev.Codility;
 
 import java.util.HashSet;
 
-public class PermCheck {
-    public static void main(String[] args) {
-        int[] A = new int[]{1, 3, 0, 6};
-        System.out.println(solution(A));
-    }
+//A permutation is a sequence containing each element from 1 to N once, and only once.
+//TASK: check if given array is permutation.
 
+public class PermCheck {
     static int solution(int[] A){
         int N = A.length;
         int checkSum = N * (N + 1) / 2;
         int i = 0;
-        HashSet<Integer> checkedNumbers = new HashSet<>();
+        HashSet<Integer> verifiedNumbers = new HashSet<>();
         boolean sequenceIsValid = true ;
 
         while (i < N && sequenceIsValid){
-            Integer item = new Integer(A[i]);
-            sequenceIsValid = checkedNumbers.add(item);
-            if (item == 0) {sequenceIsValid = false;}
-            checkSum = checkSum - item;
+            Integer record = new Integer(A[i]);
+            sequenceIsValid = verifiedNumbers.add(record);
+            if (record == 0) {sequenceIsValid = false;}
+            checkSum = checkSum - record;
             i++;
         }
 

@@ -1,12 +1,7 @@
 package com.dev.Codility;
 
 public class MaxCounters {
-    public static void main(String[] args){
-
-    }
-
     static int[] solution(int N,int[] A){
-
         int[] counters = new int[N];
         int maxValue=0;
         boolean counterChanged=false;
@@ -16,7 +11,7 @@ public class MaxCounters {
                 int pos = A[i] - 1;
                 counters[pos]++;
                 counterChanged=true;
-                if(counters[pos] > maxValue){maxValue = counters[pos];}
+                if(counters[pos] > maxValue) maxValue = counters[pos];
             }
             if (A[i] == N+1 && counterChanged){
                 for (int j = 1; j < N; j += j) {

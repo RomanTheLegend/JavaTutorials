@@ -34,6 +34,6 @@ public class BinaryGapTest {
     public void checkBasicSolution() {
         int result = BinaryGap.solution(inputNumber);
         assertEquals(result,expectedResult);
-        System.out.println("BinaryGapTest complete");
+        System.out.println(this.getClass().getSimpleName() + " completed");
     }
 }

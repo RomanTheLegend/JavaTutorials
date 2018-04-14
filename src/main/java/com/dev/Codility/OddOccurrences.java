@@ -3,33 +3,23 @@ package com.dev.Codility;
 import java.util.HashSet;
 import java.util.Iterator;
 
-/**
- * Created by the.Legend on 21/03/2018.
- */
+//A non-empty zero-indexed array A consisting of N integers is given.
+//The array contains an odd number of elements, and each element of the array can be paired
+//with another element that has the same value, except for one element that is left unpaired.
+//Task: find that element
+
 public class OddOccurrences {
+    static int solution(int[] A){
+        HashSet<Integer> uniqueNumbersFromArray = new HashSet<>();
 
-    public static void main(String[] args){
-
-        int[]  A = new int[] {2,4,7,5,4,2,5,3,3};
-
-        System.out.println(soultion(A));
-    }
-
-    static int soultion(int[] A){
-        HashSet<Integer> locatedNumbers=new HashSet<>();
         for ( int i = 0 ; i < A.length ; i++){
             Integer currentNumber = new Integer(A[i]);
-            if (locatedNumbers.contains(currentNumber)){
-                locatedNumbers.remove(currentNumber);
-            }
-            else {
-                locatedNumbers.add(currentNumber);
-            }
+            if (!uniqueNumbersFromArray.add(currentNumber)) uniqueNumbersFromArray.remove(currentNumber);
             currentNumber = null;
         }
 
         int result=0;
-        Iterator<Integer> iterator = locatedNumbers.iterator();
+        Iterator<Integer> iterator = uniqueNumbersFromArray.iterator();
         while (iterator.hasNext()){
              result = iterator.next();
         }
